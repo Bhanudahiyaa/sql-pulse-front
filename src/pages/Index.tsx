@@ -59,18 +59,18 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="flex">
         <AppSidebar />
         
         <main className="flex-1 p-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4 animate-fade-in">
+            <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4 animate-fade-in">
               🔮 SQL Whisperer
             </h1>
             <p className="text-xl text-gray-300 animate-fade-in">
-              Transform natural language into powerful SQL queries
+              Transform natural language into powerful SQL queries with Python & Streamlit
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const Index = () => {
                   <Button 
                     onClick={handleRunQuery}
                     disabled={isExecuting}
-                    className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                    className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
                   >
                     <Play className="w-4 h-4 mr-2" />
                     {isExecuting ? "Executing..." : "Run Query"}
@@ -105,11 +105,11 @@ const Index = () => {
             {results.length > 0 && (
               <div className="animate-fade-in">
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-semibold text-white">Query Results</h3>
+                  <h3 className="text-2xl font-semibold text-gray-100">Query Results</h3>
                   <Button
                     onClick={handleDownloadCSV}
                     variant="outline"
-                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white transition-all duration-300"
+                    className="border-purple-400/50 text-purple-300 hover:bg-purple-400/10 hover:text-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download CSV
